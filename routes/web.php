@@ -6,13 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PurchaseOrderController;
 use App\Http\Controllers\ReportController;
-use Illuminate\Support\Facades\Artisan;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Add this route before other routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::resource('products', ProductController::class);

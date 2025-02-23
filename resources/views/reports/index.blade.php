@@ -5,35 +5,7 @@
 @section('content')
     <div class="container">
         <h2 class="mb-4">Inventory Reports</h2>
-        <div class="row">
-            {{-- <div class="col-md-12">
-                <div class="card shadow">
-                    <div class="card-header">Low Stock Alerts</div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Current Stock</th>
-                                        <th>Minimum Required</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($products->where('quantity', '<', 'minimum_stock') as $product)
-                                        <tr class="table-warning">
-                                            <td>{{ $product->name }}</td>
-                                            <td>{{ $product->quantity }}</td>
-                                            <td>{{ $product->minimum_stock }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        </div>
+
 
         <div class="row">
             <div class="col-md-6">
@@ -75,7 +47,6 @@
                     }
                 });
 
-                // Supplier Orders Chart
                 new Chart(document.getElementById('supplierChart'), {
                     type: 'pie',
                     data: {
